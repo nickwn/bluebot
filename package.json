@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "author": "nick.thenebels@gmail.com",
-  "description": "A simple helpful bot for robotics",
+  "description": "A simple helpful robot for your Company",
   "dependencies": {
     "hubot": "^2.18.0",
     "hubot-diagnostics": "0.0.1",
