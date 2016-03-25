@@ -40,7 +40,7 @@ module.exports = (robot) ->
   # robot.leave (res) ->
   #   res.send res.random leaveReplies
   #
-  # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
+   answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
    robot.respond /what is the answer to the ultimate question of life/, (res) ->
      unless answer?
