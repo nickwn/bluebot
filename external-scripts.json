@@ -7,8 +7,5 @@
   "hubot-pugme",
   "hubot-maps",
   "hubot-rules",
-  "hubot-shipit",
-  "hubot-deployer",
-  "hubot-gh-release-pr",
-  "hubot-github"
+  "hubot-shipit"
 ]
