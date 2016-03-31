@@ -43,8 +43,8 @@ module.exports = (robot) ->
     year = today.getFullYear()
     if(args.length==1)
       key = year+"casd_qm"+args[0]
-    if(args.length==3)
-      key = year+"casd_"+args[0]+args[1]+"m"+args[2]
+    if(args.length==4)
+      key = year+"casd_"+args[0]+args[1]+"m"+args[3]
     res.send "checking tba on " + key
     robot.http("https://www.thebluealliance.com/api/v2/match/" + key)
     .header('X-TBA-App-Id', 'frc3341:bluebot:v1')
