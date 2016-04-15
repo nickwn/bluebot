@@ -18,7 +18,7 @@ module.exports = (robot) ->
     eventToSearch = msg.match[1]
     robot.logger.info eventToSearch
     robot.http('http://www.thebluealliance.com/api/v2/event/' + eventToSearch)
-      .header('X-TBA-App-Id', 'frc5506:hubot-tba-scripts:v0.1')
+      .header('X-TBA-App-Id', 'frc3341:bluebot:v1')
       .get() (err, res, body) ->
         data = JSON.parse body
         message = '*Results for ' + data.name + '*\n'

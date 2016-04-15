@@ -30,22 +30,28 @@ module.exports = (robot) ->
     robot.logger.info body.message_type
     switch body.message_type
       when 'upcoming_match'
-        message = '*Upcoming match:* '
-        message += body.message_data.event_name + '\n'
-        message += '*Time:* ' + twd(body.message_data.scheduled_time) + '\n'
-        message += '*Teams:*\n'
-        message += teams(body.message_data.team_keys)
+        hasTeam = false
+        hasTeam or= "frc3341" == team for team in body.message_data.team_keys
+        if hasTeam
+          message = '*Upcoming match:* '
+          message += body.message_data.event_name + '\n'
+          message += '*Time:* ' + twd(body.message_data.scheduled_time) + '\n'
+          message += '*Teams:*\n'
+          message += teams(body.message_data.team_keys)
       when 'match_score'
-        message = '*Match Score:* '
-        message += body.message_data.event_name + '\n'
-        message += '*Match Number:* ' + body.message_data.match.match_number + '\n'
-        message += '*Time:* ' + twd(body.message_data.match.time) + '\n'
-        message += '*Videos:* ' + video + '\n' for video in body.message_data.match.videos if (body.message_data.match.videos) > 0
-        message += '*Blue Alliance:*\n' + '_Score:_ ' + body.message_data.match.alliances.blue.score + '\n'
-        message += teams(body.message_data.match.alliances.blue.teams)
-        message += '*Red Alliance:*\n'
-        message += '_Score:_ ' + body.message_data.match.alliances.red.score + '\n'
-        message += teams(body.message_data.match.alliances.red.teams)
+        hasTeam = false
+        hasTeam or= "frc3341" == team for team in body.message_data.team_keys
+        if hasTeam
+          message = '*Match Score:* '
+          message += body.message_data.event_name + '\n'
+          message += '*Match Number:* ' + body.message_data.match.match_number + '\n'
+          message += '*Time:* ' + twd(body.message_data.match.time) + '\n'
+          message += '*Videos:* ' + video + '\n' for video in body.message_data.match.videos if (body.message_data.match.videos) > 0
+          message += '*Blue Alliance:*\n' + '_Score:_ ' + body.message_data.match.alliances.blue.score + '\n'
+          message += teams(body.message_data.match.alliances.blue.teams)
+          message += '*Red Alliance:*\n'
+          message += '_Score:_ ' + body.message_data.match.alliances.red.score + '\n'
+          message += teams(body.message_data.match.alliances.red.teams)
       when 'alliance_selection'
         message = '*Alliance Selection:* ' + body.message_data.event.name + '\n'
         message += pick for pick in alliance.picks + ' *-' + i + '*\n' for alliance, i in body.message_data.event.alliances
@@ -62,7 +68,7 @@ module.exports = (robot) ->
 
     if message
       robot.logger.info message
-      robot.send envelope, message
+      robot.send message
     res.writeHead 200, {'Content-Type': 'text/plain'}
     res.end 'Thanks'
 
