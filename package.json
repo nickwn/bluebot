@@ -29,5 +29,6 @@
   },
   "scripts": {
     "start": "bin/hubot"
-  }
+  },
+  "main": "hubot"
 }
