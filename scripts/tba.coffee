@@ -8,8 +8,11 @@
 #   hubot tba matchinfo <matchnumber> - Looks up the specified match and returns info on it - only for sd qualifiers
 #   hubot tba matchinfo <qm | ef | qf | sf | f> <number> match <number> Looks up the match info for specified qm/ef/qf/sf/f and match number
 #
-#
 # Notes:
+#   None
+#
+# Author:
+#   nickwn
 
 
 module.exports = (robot) ->

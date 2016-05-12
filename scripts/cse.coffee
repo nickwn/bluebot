@@ -2,7 +2,8 @@
 #   searches a custom search with a query
 # Commands:
 #   hubot search <query> searches a custom search with a query
-
+# Author:
+#   nickwn
 module.exports = (robot) ->
 
   robot.respond /search (.*)/, (res) ->

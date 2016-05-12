@@ -2,6 +2,8 @@
 #   turns a chatbot on or off
 # Commands:
 #   hubot chatbot (on | off)
+# Author:
+#   nickwn
 
 cleverbot = require('cleverbot-node')
 
