@@ -1,1 +1,1 @@
-web: sh startbot.sh
+web: startbot
