@@ -1,5 +1,5 @@
 #! bin/bash
-while true;
+while true
 do
-  bin/hubot
+  bin/hubot -a slack
 done

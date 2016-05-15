@@ -2,4 +2,4 @@
 cls
 :loop
 bin\hubot
-goto :loop
+goto loop
