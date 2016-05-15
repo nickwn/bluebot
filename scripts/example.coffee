@@ -60,17 +60,14 @@ module.exports = (robot) ->
        res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
        return
   #
-<<<<<<< HEAD
      res.send "Hey, want to hear the most annoying sound in the world?"
      annoyIntervalId = setInterval () ->
        res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
      , 1000
-=======
   #   res.send "Hey, want to hear the most annoying sound in the world?"
   #   annoyIntervalId = setInterval () ->
   #     res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
   #   , 1000
->>>>>>> a2c316f0f7e7e2241009365c89daef707a5c734c
   #
    robot.respond /unannoy me/, (res) ->
      if annoyIntervalId
@@ -111,31 +108,3 @@ module.exports = (robot) ->
   # robot.respond /sleep it off/i, (res) ->
   #   robot.brain.set 'totalSodas', 0
   #   res.reply 'zzzzz'
-<<<<<<< HEAD
-
-    robot.respond /teaminfo (.*) /i, (res) ->
-      res.reply "hello"
-    #  team = res.match[1]
-    #  robot.http("https://www.thebluealliance.com/api/v2/team/" + team)
-    #  .header('X-TBA-App-Id', 'frc3341:bluebot:v1')
-    #  .get() (err, res, body) ->
-    #    # error checking code here lol jk not really
-
-    #    if response.getHeader('Content-Type') isnt 'application/json'
-    #      res.send "Didn't get back JSON :("
-    #      return
-
-    #    try
-    #      data = JSON.parse body
-    #    catch error
-    #     res.send "Ran into an error parsing JSON :("
-    #     return
-
-    #    message = "Team name: " + body.name + "\n"
-    #    message += "Nickname: " + body.nickname + "\n"
-    #    message += "Location: " + body.locality + ", " + body.region + ", " + body.country_name + "\n"
-    #    message += "Motto: " + body.motto + "\n"
-
-    #    res.reply message
-=======
->>>>>>> a2c316f0f7e7e2241009365c89daef707a5c734c
