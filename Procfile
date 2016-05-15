@@ -1,1 +1,1 @@
-web: ./startbot
+web: sh ./startbot
