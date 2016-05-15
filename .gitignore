@@ -1,7 +1,4 @@
 node_modules
-<<<<<<< HEAD
 logs
-=======
->>>>>>> a2c316f0f7e7e2241009365c89daef707a5c734c
 .DS_Store*
 .hubot_history
