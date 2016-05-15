@@ -60,10 +60,17 @@ module.exports = (robot) ->
        res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
        return
   #
+<<<<<<< HEAD
      res.send "Hey, want to hear the most annoying sound in the world?"
      annoyIntervalId = setInterval () ->
        res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
      , 1000
+=======
+  #   res.send "Hey, want to hear the most annoying sound in the world?"
+  #   annoyIntervalId = setInterval () ->
+  #     res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
+  #   , 1000
+>>>>>>> a2c316f0f7e7e2241009365c89daef707a5c734c
   #
    robot.respond /unannoy me/, (res) ->
      if annoyIntervalId
@@ -104,6 +111,7 @@ module.exports = (robot) ->
   # robot.respond /sleep it off/i, (res) ->
   #   robot.brain.set 'totalSodas', 0
   #   res.reply 'zzzzz'
+<<<<<<< HEAD
 
     robot.respond /teaminfo (.*) /i, (res) ->
       res.reply "hello"
@@ -129,3 +137,5 @@ module.exports = (robot) ->
     #    message += "Motto: " + body.motto + "\n"
 
     #    res.reply message
+=======
+>>>>>>> a2c316f0f7e7e2241009365c89daef707a5c734c

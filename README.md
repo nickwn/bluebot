@@ -1,10 +1,5 @@
 # Option 16's personalized hubot
 
-This repository is mainly for transferring code from my desktop to the bot
-server (a Raspberry Pi). This bot may be later hosted on the same server as
-George's Minecraft server once I stop updating the code as frequently.
-New functionalities may be suggested via issues.
-
 Type in
 
     hubot> help

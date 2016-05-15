@@ -30,7 +30,7 @@ module.exports = (robot) ->
     safe_room_name = "#{msg.message.room}".replace /[^a-z0-9]/ig, ''
     "./logs/#{safe_room_name}.log"
   formatMessage = (msg) ->
-    "[#{new Date()}] #{msg.message.user.name}: #{msg.message.text}\n"
+    "#{msg.message.text}\n"
 
   robot.respond /search logs (.*)/, (res) ->
     grepWithFork res, ".\\logs\\*", res.match[1], (err) ->

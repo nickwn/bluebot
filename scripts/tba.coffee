@@ -17,7 +17,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /tba teaminfo (.*)/, (res) ->
+  robot.respond /tba team info (.*)/, (res) ->
     team = res.match[1]
     robot.http("https://www.thebluealliance.com/api/v2/team/" + team)
     .header('X-TBA-App-Id', 'frc3341:bluebot:v1')
@@ -35,7 +35,7 @@ module.exports = (robot) ->
       message += "*Website:* " + data.website + "\n"
       res.send message
 
-  robot.respond /tba matchinfo (.*)/, (res) ->
+  robot.respond /tba match info (.*)/, (res) ->
     args = res.match[1].split " "
     today = new Date
     year = today.getFullYear()
