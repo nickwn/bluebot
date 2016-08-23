@@ -6,7 +6,7 @@
 #   nickwn
 module.exports = (robot) ->
 
-  robot.respond /search (.*)/, (res) ->
+  robot.respond /search (.*)/i, (res) ->
     query = res.match[1]
     if query.toString().search('logs') == -1
       cx = process.env.HUBOT_GOOGLE_CSE_ID

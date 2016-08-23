@@ -4,9 +4,9 @@
 #   qm: qualifier, ef: idk, qf: quarterfinal, sf: semifinal, f: final
 #
 # Commands:
-#   hubot tba teaminfo frc<teamnumber> - Looks up the specified event team and returns info on it
-#   hubot tba matchinfo <matchnumber> - Looks up the specified match and returns info on it - only for sd qualifiers
-#   hubot tba matchinfo <qm | ef | qf | sf | f> <number> match <number> Looks up the match info for specified qm/ef/qf/sf/f and match number
+#   hubot team info for frc<teamnumber> - Looks up the specified event team and returns info on it
+#   hubot match info for <matchnumber> - Looks up the specified match and returns info on it - only for sd qualifiers
+#   hubot match info for <qm | ef | qf | sf | f> <number> match <number> Looks up the match info for specified qm/ef/qf/sf/f and match number
 #
 # Notes:
 #   None
@@ -17,7 +17,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /tba team info (.*)/, (res) ->
+  robot.respond /team info for (.*)/i, (res) ->
     team = res.match[1]
     robot.http("https://www.thebluealliance.com/api/v2/team/" + team)
     .header('X-TBA-App-Id', 'frc3341:bluebot:v1')
@@ -35,7 +35,7 @@ module.exports = (robot) ->
       message += "*Website:* " + data.website + "\n"
       res.send message
 
-  robot.respond /tba match info (.*)/, (res) ->
+  robot.respond /match info for (.*)/i, (res) ->
     args = res.match[1].split " "
     today = new Date
     year = today.getFullYear()
@@ -60,6 +60,3 @@ module.exports = (robot) ->
       message += "*Score:* #{data.alliances.red.score}\n"
       message += "*Teams:* #{data.alliances.red.teams}\n"
       res.send message
-
-  robot.hear /hello/, (res) ->
-    res.send "hello"

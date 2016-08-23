@@ -32,7 +32,7 @@ module.exports = (robot) ->
   formatMessage = (msg) ->
     "#{msg.message.text}\n"
 
-  robot.respond /search logs (.*)/, (res) ->
+  robot.respond /search logs (.*)/i, (res) ->
     grepWithFork res, ".\\logs\\*", res.match[1], (err) ->
       if err
         res.send "There was an error in the search:\n ```#{err}```"
