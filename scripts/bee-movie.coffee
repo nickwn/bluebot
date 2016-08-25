@@ -12,9 +12,9 @@
 # Author:
 #   nickwn
 #
+module.exports = (robot) ->
 
-
-var movieTranscript = "According to all known laws
+  movieTranscript = "According to all known laws
 of aviation,
 
 
@@ -4577,9 +4577,9 @@ Wrap it up, guys.
 
 I had virtually no rehearsal for that."
 
-robot.respond /bee me/i, (res) ->
-  random = Math.floor(Math.random() * (max - min) + min)
-  if random == 5
-    res.send(movieTranscript)
-  else
-    res.send("bee")
+  robot.respond /bee me/i, (res) ->
+    random = Math.floor(Math.random() * 10)
+    if (random == 5)
+      res.send(movieTranscript)
+    else
+      res.send("bee")
